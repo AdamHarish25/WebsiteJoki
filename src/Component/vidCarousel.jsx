@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 const videos = [
   {
@@ -20,6 +20,7 @@ const videos = [
 
 export default function VideoCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [hover, setHover] = useState(false);
 
   const handlePrev = () => {
     setCurrentIndex((prevIndex) =>
@@ -32,6 +33,20 @@ export default function VideoCarousel() {
       prevIndex === videos.length - 1 ? 0 : prevIndex + 1
     );
   };
+
+  useEffect(() => {
+    if (!hover) {
+      const interval = setInterval(() => {
+        handleNext();
+      }, 3000);
+
+      return () => clearInterval(interval);
+    }
+
+    console.log("Hover is on, paused auto-slide");
+
+    return undefined; // optional, but clearer
+  }, [hover, currentIndex]);
 
   return (
     <div className="flex items-center justify-center w-full p-4 relative">
@@ -50,6 +65,14 @@ export default function VideoCarousel() {
           {videos.map((video, index) => (
             <div
               key={video.id}
+              onMouseEnter={() => {
+                setHover(true);
+                console.log("mouse is inside");
+              }}
+              onMouseLeave={() => {
+                setHover(false);
+                console.log("mouse is outside");
+              }}
               className="min-w-full flex-shrink-0 flex flex-col items-center bg-white rounded-xl shadow-md p-4"
             >
               <div className="relative w-full pb-[56.25%] bg-black rounded-lg overflow-hidden cursor-pointer">

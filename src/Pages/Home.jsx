@@ -13,6 +13,7 @@ import { Link } from 'react-router';
 import Carousel from '../Component/carousel';
 import Sinefolis from '../assets/SineFolis.png';
 import VsTravel from '../assets/VsTravel.png';
+import FtbwCosmetic from '../assets/ftbw.png';
 import VideoCarousel from '../Component/vidCarousel';
 import { div } from 'framer-motion/client';
 import Footer from '../Component/Footer';
@@ -59,6 +60,8 @@ const Home = () => {
     const slides = [
         { id: 1, image: Sinefolis, title: "SineFolis Theatre", description: "Experience the magic of movies." },
         { id: 2, image: VsTravel, title: "VsTravel", description: "Travelling made easy." },
+        { id: 3, image: FtbwCosmetic, title: "FTBW Cosmetics", description: "When beauty comes to life." },
+
     ];
 
     const LogoMap = [

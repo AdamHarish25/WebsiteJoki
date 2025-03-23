@@ -1,18 +1,32 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-
-
-export default function Carousel({slides}) {
+export default function Carousel({ slides }) {
   const [current, setCurrent] = useState(0);
+  const [hover, setHover] = useState(false);
 
-  const nextSlide  = () => {
+  const nextSlide = () => {
     setCurrent((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
   };
-  
+
   const prevSlide = () => {
     setCurrent((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
   };
+
+  useEffect(() => {
+    if (!hover) {
+      const interval = setInterval(() => {
+        nextSlide();
+      }, 3000);
+  
+      return () => clearInterval(interval);
+    }
+  
+    console.log("Hover is on, paused auto-slide");
+  
+    return undefined; // optional, but clearer
+  }, [hover, current]);
+  
 
   return (
     <div className="w-full relative">
@@ -24,6 +38,14 @@ export default function Carousel({slides}) {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -50 }}
             transition={{ duration: 0.5 }}
+            onMouseEnter={() => {
+              setHover(true);
+              console.log("mouse is inside");
+            }}
+            onMouseLeave={() => {
+              setHover(false);
+              console.log("mouse is outside");
+            }}
             className="relative w-full h-[400px] flex items-center justify-center bg-white text-white rounded-lg shadow-lg"
           >
             <img
