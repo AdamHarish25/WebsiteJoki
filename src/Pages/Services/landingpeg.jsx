@@ -11,8 +11,12 @@ import logo5 from '../../assets/BrandSupport/UrusIUsaha.png';
 import logo6 from '../../assets/BrandSupport/VsTravel.png';
 import logo1 from '../../assets/BrandSupport/google.png';
 import logo8 from '../../assets/BrandSupport/ftbw.png';
+import { useState } from "react";
 
 const LandingPage = () => {
+    const [isClicked, setIsClicked] = useState(false);
+    const [isClicked2, setIsClicked2] = useState(false);
+
     const LogoMap = [
             {  
                 logo: logo8
@@ -48,7 +52,8 @@ const LandingPage = () => {
         scrollingLogo: "overflow-x-auto bg-Forest-green py-10 flex gap-10 lg:gap-16 px-10 items-center w-full h-fit",
         button: "mt-6 px-6 py-3 bg-Emerald-green text-white font-medium rounded-lg hover:text-Emerald-green hover:bg-white transition",
         card: "bg-white shadow-md rounded-lg p-6 flex flex-col items-center text-center space-y-4 hover:shadow-lg transition",
-        priceCard: "flex-1 bg-white shadow-lg rounded-xl p-6 text-center border hover:border-Emerald-green transition"
+        priceCard: "flex-1 bg-white shadow-lg rounded-xl p-6 text-center border hover:border-Emerald-green transition",
+        highlight: "text-Emerald-green"
     };
 
     return (
@@ -80,7 +85,7 @@ const LandingPage = () => {
 
             {/* Fitur Section */}
             <section className={className.section}>
-                <h2 className={className.heading}>Solusi Kami</h2>
+                <h2 className={className.heading}><span className={className.highlight}>Solusi</span> Kami</h2>
                 <p className={className.subheading}>Berikut layanan utama dari jasa landing page kami:</p>
 
                 <div className="grid md:grid-cols-3 gap-8">
@@ -106,7 +111,7 @@ const LandingPage = () => {
 
             {/* Kenapa Pilih Kami */}
             <section className={`${className.section} bg-gray-50 rounded-lg`}>
-                <h2 className={className.heading}>Kenapa Pilih Kami?</h2>
+                <h2 className={className.heading}>Kenapa <span className={className.highlight}>Pilih Kami?</span></h2>
                 <div className="grid md:grid-cols-3 gap-8 mt-8">
                     <div>
                         <h3 className="text-Emerald-green text-3xl font-bold mb-2">01</h3>
@@ -128,7 +133,7 @@ const LandingPage = () => {
 
             {/* Paket Harga */}
             <section className={className.section}>
-                <h2 className={className.heading}>Paket Landing Page</h2>
+                <h2 className={className.heading}>Paket <span className={className.highlight}>Landing Page</span></h2>
                 <p className={className.subheading}>Pilih paket sesuai kebutuhan bisnis Anda</p>
 
                 <div className="flex flex-col md:flex-row gap-8">
@@ -177,12 +182,16 @@ const LandingPage = () => {
             <section className={className.section}>
                 <h2 className={className.heading}>Pertanyaan Umum</h2>
                 <div className="mt-8 space-y-6">
-                    <details className="bg-gray-100 p-4 rounded-lg">
+                    <details className={`px-4 py-2 rounded-lg hover:bg-white hover:border-Emerald-green border ${isClicked == true ? "bg-white border-Emerald-green" : "bg-gray-100 border-white"}`} onClick={() => {
+                        setIsClicked(!isClicked)
+                    }}>
                         <summary className="cursor-pointer font-semibold text-gray-700">Apakah harga sudah termasuk domain & hosting?</summary>
                         <p className="text-gray-500 mt-2 text-sm">Ya, semua paket kami sudah termasuk domain dan hosting selama 1 tahun.</p>
                     </details>
 
-                    <details className="bg-gray-100 p-4 rounded-lg">
+                    <details className={`p-4 rounded-lg hover:bg-white hover:border-Emerald-green border ${isClicked2 == true ? "bg-white border-Emerald-green" : "bg-gray-100 border-white"}`} onClick={() => {
+                        setIsClicked2(!isClicked2)
+                    }}>
                         <summary className="cursor-pointer font-semibold text-gray-700">Apakah desain bisa disesuaikan?</summary>
                         <p className="text-gray-500 mt-2 text-sm">Tentu! Kami menyediakan layanan desain kustom sesuai kebutuhan bisnis Anda.</p>
                     </details>
