@@ -54,7 +54,7 @@ export default function Navbar() {
                   <h4 className="font-bold mb-3">Digital Ads</h4>
                   <ul className="space-y-2 text-sm">
                     <li className="hover:text-Emerald-green cursor-pointer">Meta Ads</li>
-                    <li className="hover:text-Emerald-green cursor-pointer">Google Ads</li>
+                    <li className="hover:text-Emerald-green cursor-pointer"><Link to="G-ads">Google Ads</Link></li>
                   </ul>
                 </div>
 
