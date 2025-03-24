@@ -12,11 +12,13 @@ import Blog2 from './Pages/Blog/PenerapanFNB';
 import Blog3 from './Pages/Blog/PenerapanSelling';
 import LandingPage from './Pages/Services/landingpeg';
 import Footer from './Component/Footer';
+import WhatsappButton from './Component/WAFloatButton';
+import GoogleSEO from './Pages/Services/GoogleSeo';
 
 function App() {
 
   return (
-    <div className='App'>
+    <div className='relative'>
       <Navbar/>
        <Routes>
           <Route path="/" element={<Home/>} />
@@ -28,7 +30,10 @@ function App() {
           <Route path='Blog2' element={<Blog2/>}/>
           <Route path='Blog3' element={<Blog3/>}/>
           <Route path= "LandingPage" element={<LandingPage/>}/>
+          <Route path='G-ads' element={<GoogleSEO/>}/>
         </Routes>
+
+        <WhatsappButton/>
         <Footer />
     </div>
   )
