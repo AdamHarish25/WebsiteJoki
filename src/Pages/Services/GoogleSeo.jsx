@@ -9,6 +9,8 @@ import logo6 from '../../assets/BrandSupport/VsTravel.png';
 import logo1 from '../../assets/BrandSupport/google.png';
 import logo8 from '../../assets/BrandSupport/ftbw.png';
 
+import webAnalytics from '../../assets/WebMarketingIllustration.png';
+
 export default function GoogleAdsPage() {
     const [isClicked, setIsClicked] = useState(false);
     const [isClicked2, setIsClicked2] = useState(false);
@@ -66,7 +68,7 @@ export default function GoogleAdsPage() {
                 </div>
             </section>
 
-            <div className={"overflow-x-auto lg:overflow-x-hidden lg:hover:overflow-x-auto bg-Forest-green py-10 flex gap-10 lg:gap-16 px-10 items-center w-full h-fit"}>
+            <div className={"overflow-x-auto lg:overflow-x-hidden lg:hover:overflow-x-auto bg-green-50 py-10 flex gap-10 lg:gap-16 px-10 items-center w-full h-fit"}>
                 {LogoMap.map((data, index) => {
                     return (
                         <img src={data.logo} key={index + 1} className='h-10 lg:h-14 grayscale hover:grayscale-0 transform duration-500 opacity-50 hover:opacity-100 hover:h-12' />
@@ -105,26 +107,26 @@ export default function GoogleAdsPage() {
             </section>
 
             {/* Why Choose Section */}
-            <section className="bg-gray-50 py-16 px-6 md:px-20">
+            <section className="bg-green-50 py-16 px-6 md:px-20">
                 <h2 className="text-3xl font-bold text-center mb-10">
                     Kenapa Pilih <span className="text-Emerald-green">WebsiteJokiID</span>
                 </h2>
                 <div className="grid md:grid-cols-3 gap-10">
                     <div>
                         <ul className="space-y-4">
-                            <li>Tim digital marketing yang profesional</li>
-                            <li>Konsultasi gratis</li>
-                            <li>Iklan bisa langsung terlihat</li>
+                            <li>✅ Tim digital marketing yang profesional</li>
+                            <li>✅ Konsultasi gratis</li>
+                            <li>✅ Iklan bisa langsung terlihat</li>
                         </ul>
                     </div>
-                    <div className="flex justify-center">
-                        <img src="https://via.placeholder.com/300x300" alt="Kenapa Pilih" />
+                    <div className="flex justify-center lg:order-2 order-3">
+                        <img src={webAnalytics} alt="Kenapa Pilih" />
                     </div>
-                    <div>
+                    <div className="lg:order-3 order-2">
                         <ul className="space-y-4">
-                            <li>Pemberian laporan secara berkala</li>
-                            <li>Harga terjangkau</li>
-                            <li>Update dengan perubahan Meta Ads</li>
+                            <li>✅ Pemberian laporan secara berkala</li>
+                            <li>✅ Harga terjangkau</li>
+                            <li>✅ Update dengan perubahan Meta Ads</li>
                         </ul>
                     </div>
                 </div>
@@ -169,6 +171,40 @@ export default function GoogleAdsPage() {
                     </div>
                 </div>
             </section>
+
+            {/* Syarat Beriklan di Google Ads Section */}
+            <section className="bg-white py-16 px-6 md:px-20">
+                <h2 className="text-3xl font-bold text-center mb-10">
+                    Syarat Beriklan di <span className="text-Emerald-green">Google Ads</span>
+                </h2>
+                <div className="grid md:grid-cols-2 gap-10 text-left">
+                    <div>
+                        <h3 className="font-semibold mb-4 text-lg">Dokumen dan Informasi yang Diperlukan</h3>
+                        <ul className="space-y-3 text-sm">
+                            <li>✔️ Akun Google aktif</li>
+                            <li>✔️ Metode pembayaran (kartu kredit/debit atau rekening lainnya)</li>
+                            <li>✔️ Materi iklan (gambar, video, teks)</li>
+                            <li>✔️ Link website atau landing page yang sesuai</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 className="font-semibold mb-4 text-lg">Kebijakan dan Aturan Google Ads</h3>
+                        <ul className="space-y-3 text-sm">
+                            <li>✔️ Iklan tidak melanggar kebijakan Google (produk ilegal, konten sensitif, dll.)</li>
+                            <li>✔️ Website aman & tidak mengandung malware</li>
+                            <li>✔️ Tidak melanggar hak cipta atau merk dagang</li>
+                            <li>✔️ Menyediakan informasi kontak yang jelas (alamat, email, no. telepon)</li>
+                            <li>✔️ Jasa yang tidak bersangkut paut dengan Jasa/Dokumen Pemerintah</li>
+
+                        </ul>
+                    </div>
+                </div>
+                {/* Optional placeholder for additional content */}
+                <div className="mt-10 text-center">
+                    <p className="text-sm text-gray-600">*Untuk detail syarat lebih lanjut, hubungi tim kami.</p>
+                </div>
+            </section>
+
 
             {/* CTA Section */}
             <div className="w-full grid place-items-center">

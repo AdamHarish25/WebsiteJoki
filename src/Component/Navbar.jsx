@@ -18,7 +18,7 @@ export default function Navbar() {
         </div>
 
         <ul className="hidden md:flex space-x-8 text-gray-700 items-center">
-          <li className="hover:text-Emerald-green cursor-pointer transition">Tentang</li>
+          <li className="hover:text-Emerald-green cursor-pointer transition"><Link to="AboutUs">Tentang</Link></li>
 
           {/* Solusi + Dropdown */}
           <li className="relative group cursor-pointer">
@@ -71,7 +71,7 @@ export default function Navbar() {
           </li>
 
           <li className="hover:text-Emerald-green cursor-pointer transition">Karya</li>
-          <li className="hover:text-Emerald-green cursor-pointer transition">Blog</li>
+          <li className="hover:text-Emerald-green cursor-pointer transition"><Link to="Blog">Blog</Link></li>
         </ul>
 
 
@@ -86,19 +86,19 @@ export default function Navbar() {
         className={`fixed inset-0 bg-white z-40 flex flex-col justify-center items-center text-2xl text-gray-700 transition-all duration-500 ease-in-out
         ${isOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10 pointer-events-none'}`}
       >
-        <img src={Logo} alt="Logo" className="w-60 mb-10 transition duration-700 ease-in-out" />
+        <Link to="/" onClick={() => setIsOpen(false)}><img src={Logo} alt="Logo" className="w-60 mb-10 transition duration-700 ease-in-out" /></Link>
 
         <ul className="flex flex-col space-y-6 items-center w-full">
           <li
             className="hover:text-Emerald-green cursor-pointer transition duration-300"
             onClick={() => setIsOpen(false)}
           >
-            Tentang
+            <Link to="AboutUs">Tentang</Link>
           </li>
 
           {/* Mobile Solusi with Submenu */}
           <li
-            className={`hover:text-Emerald-green cursor-pointer transition duration-300 flex justify-between items-center px-10 ${showMobileDropdown ? "w-full" : "w-fit"}`}
+            className={`hover:text-Emerald-green cursor-pointer transition duration-500 flex justify-between items-center px-10 ${showMobileDropdown ? "w-full" : "w-fit"}`}
             onClick={() => setShowMobileDropdown(!showMobileDropdown)}
           >
             <span>Solusi</span>
@@ -111,10 +111,16 @@ export default function Navbar() {
             <ul className="flex flex-col space-y-4 text-lg text-gray-600 mt-2 w-full px-16">
               <li className="hover:text-Emerald-green cursor-pointer">Website Bisnis Kustom</li>
               <li className="hover:text-Emerald-green cursor-pointer">Aplikasi Android & iOS</li>
-              <li className="hover:text-Emerald-green cursor-pointer">Landing Page</li>
+              <li className="hover:text-Emerald-green cursor-pointer"><Link to={"LandingPage"} onClick={() => {
+                setIsOpen(false)
+                setShowMobileDropdown(false)
+                }}>Landing Page</Link></li>
               <li className="hover:text-Emerald-green cursor-pointer">Website Toko Online</li>
               <li className="hover:text-Emerald-green cursor-pointer">Meta Ads</li>
-              <li className="hover:text-Emerald-green cursor-pointer">Google Ads</li>
+              <li className="hover:text-Emerald-green cursor-pointer"><Link to="G-ads" onClick={() => {
+                setIsOpen(false)
+                setShowMobileDropdown(false)
+                }}>Google Ads</Link></li>
               <li className="hover:text-Emerald-green cursor-pointer">Tips N Trick SEO</li>
               <li className="hover:text-Emerald-green cursor-pointer">Jasa Writing</li>
             </ul>
@@ -130,7 +136,7 @@ export default function Navbar() {
             className="hover:text-Emerald-green cursor-pointer transition duration-300"
             onClick={() => setIsOpen(false)}
           >
-            Blog
+            <Link to="Blog">Blog</Link>
           </li>
         </ul>
       </div>

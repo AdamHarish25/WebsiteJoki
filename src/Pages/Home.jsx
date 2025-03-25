@@ -20,6 +20,7 @@ import Footer from '../Component/Footer';
 import Blog1 from '../assets/Blogs/Blog1.png';
 import Blog2 from '../assets/Blogs/Blog2.png';
 import Blog3 from '../assets/Blogs/Blog3.png';
+import TextTestimonials from '../Component/TextTestimonial';
 
 
 
@@ -126,7 +127,7 @@ const Home = () => {
                 },
                 {
                     text: "Landing Page",
-                    link: "https://App.multiplatform.com"
+                    link: "LandingPage"
                 },
                 {
                     text: "Sistem Informasi",
@@ -146,7 +147,7 @@ const Home = () => {
             button: [
                 {
                     text: "Google Ads",
-                    link: "https://App.cibubur.com"
+                    link: "G-ads"
                 },
                 {
                     text: "Meta Ads",
@@ -164,21 +165,21 @@ const Home = () => {
         {
             title: "10 Contoh SEO di Bidang IT",
             description: "10 contoh SEO yang terbukti ampuh buat bisnis IT—langsung praktik dan hasilnya terasa! Cek tips-tipsnya di artikel ini.",
-            date: "20 February 2025",
+            date: "20 Januari 2025",
             img: Blog1,
             link: "Blog1"
         },
         {
             title: "Contoh SEO di Bidang F&B",
             description: "Bikin bisnis F&B lo makin gampang ditemuin di Google! Cek 10 contoh SEO simpel yang bisa naikin traffic dan narik pelanggan baru.",
-            date: "20 March 2025",
+            date: "20 February 2025",
             img: Blog2,
             link: "Blog2"
         },
         {
             title: "Contoh SEO di Bidang Selling",
             description: "Jualan online makin susah bersaing? Tenang, cek 10 contoh SEO khusus buat ningkatin penjualan dan bikin produk lo makin gampang ditemuin calon pembeli!",
-            date: "20 April 2025",
+            date: "20 March 2025",
             img: Blog3,
             link: "Blog3"
         }
@@ -340,7 +341,7 @@ const Home = () => {
                     <p className='text-gray-500 mx-10 text-sm lg:text-base'>Kami selalu berusaha utk memberikan yang terbaik bagi klien kami, simak apa kata klien kami yang telah mencobanya!</p>
                 </div>
 
-                <VideoCarousel />
+                <TextTestimonials />
             </div>
 
             <div className={className.Blog}>

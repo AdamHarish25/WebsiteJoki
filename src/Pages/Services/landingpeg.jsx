@@ -62,7 +62,7 @@ const LandingPage = () => {
 
             {/* Hero Section */}
             <section className={`${className.section} flex flex-col-reverse md:flex-row justify-center gap-10 items-center`}>
-                <div className="md:w-full text-center md:text-left">
+                <div className="md:w-full text-left">
                     <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
                         Jasa Pembuatan <span className={className.highlight}>Landing Page Profesional</span> 
                     </h1>
