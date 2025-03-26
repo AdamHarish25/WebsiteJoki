@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import Logo from '../assets/logo.png';
 import { Link } from "react-router"; // or react-router-dom if you use that!
+import Tooltip from "./tooltip";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false); // mobile menu
@@ -11,9 +12,11 @@ export default function Navbar() {
     <nav className="bg-white shadow-md py-4 px-10 fixed w-full z-50">
       <div className="max-w-7xl mx-auto flex justify-between items-center relative">
         {/* Logo */}
-        <div className="text-Emerald-green font-bold text-xl flex items-center">
+        <div className="text-Emerald-green font-bold text-xl flex items-center group">
           <Link to="/">
-            <img src={Logo} alt="Logo" className="w-52" />
+            <Tooltip message={"Ke Beranda ->"}>
+              <img src={Logo} alt="Logo" className="w-52 group-hover:w-56 transition-all duration-200" />
+            </Tooltip>
           </Link>
         </div>
 
@@ -34,9 +37,9 @@ export default function Navbar() {
                 <div>
                   <h4 className="font-bold mb-3">Untuk Bisnis</h4>
                   <ul className="space-y-2 text-sm">
-                    <li className="hover:text-Emerald-green cursor-pointer">Website Bisnis Kustom</li>
-                    <li className="hover:text-Emerald-green cursor-pointer">Aplikasi Android & iOS</li>
-                    <li className="hover:text-Emerald-green cursor-pointer">Sistem Informasi</li>
+                    <li className="hover:text-Emerald-green cursor-pointer line-through">Website Bisnis Kustom</li>
+                    <li className="hover:text-Emerald-green cursor-pointer line-through">Aplikasi Android & iOS</li>
+                    <li className="hover:text-Emerald-green cursor-pointer line-through">Sistem Informasi</li>
                   </ul>
                 </div>
 
@@ -45,7 +48,7 @@ export default function Navbar() {
                   <h4 className="font-bold mb-3">Untuk UMKM</h4>
                   <ul className="space-y-2 text-sm">
                     <li className="hover:text-Emerald-green cursor-pointer"><Link to={"LandingPage"} >Landing Page</Link></li>
-                    <li className="hover:text-Emerald-green cursor-pointer">Website Toko Online</li>
+                    <li className="hover:text-Emerald-green cursor-pointer line-through">Website Toko Online</li>
                   </ul>
                 </div>
 
@@ -53,7 +56,7 @@ export default function Navbar() {
                 <div>
                   <h4 className="font-bold mb-3">Digital Ads</h4>
                   <ul className="space-y-2 text-sm">
-                    <li className="hover:text-Emerald-green cursor-pointer">Meta Ads</li>
+                    <li className="hover:text-Emerald-green cursor-pointer line-through">Meta Ads</li>
                     <li className="hover:text-Emerald-green cursor-pointer"><Link to="G-ads">Google Ads</Link></li>
                   </ul>
                 </div>
@@ -62,15 +65,15 @@ export default function Navbar() {
                 <div>
                   <h4 className="font-bold mb-3">SEO</h4>
                   <ul className="space-y-2 text-sm">
-                    <li className="hover:text-Emerald-green cursor-pointer">Tips N Trick</li>
-                    <li className="hover:text-Emerald-green cursor-pointer">Jasa Writing</li>
+                    <li className="hover:text-Emerald-green cursor-pointer line-through">Tips N Trick</li>
+                    <li className="hover:text-Emerald-green cursor-pointer line-through">Jasa Writing</li>
                   </ul>
                 </div>
               </div>
             </div>
           </li>
 
-          <li className="hover:text-Emerald-green cursor-pointer transition">Karya</li>
+          <li className="hover:text-Emerald-green cursor-pointer transition"><Link to="Portfolio">Karya</Link></li>
           <li className="hover:text-Emerald-green cursor-pointer transition"><Link to="Blog">Blog</Link></li>
         </ul>
 
@@ -86,7 +89,9 @@ export default function Navbar() {
         className={`fixed inset-0 bg-white z-40 flex flex-col justify-center items-center text-2xl text-gray-700 transition-all duration-500 ease-in-out
         ${isOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10 pointer-events-none'}`}
       >
-        <Link to="/" onClick={() => setIsOpen(false)}><img src={Logo} alt="Logo" className="w-60 mb-10 transition duration-700 ease-in-out" /></Link>
+        <Link to="/" onClick={() => setIsOpen(false)}><Tooltip message={"Ke Beranda ->"}>
+          <img src={Logo} alt="Logo" className="mb-10 w-52 group-hover:w-56 transition-all duration-200" />
+        </Tooltip></Link>
 
         <ul className="flex flex-col space-y-6 items-center w-full">
           <li
@@ -109,20 +114,20 @@ export default function Navbar() {
 
           {showMobileDropdown && (
             <ul className="flex flex-col space-y-4 text-lg text-gray-600 mt-2 w-full px-16">
-              <li className="hover:text-Emerald-green cursor-pointer">Website Bisnis Kustom</li>
-              <li className="hover:text-Emerald-green cursor-pointer">Aplikasi Android & iOS</li>
+              <li className="hover:text-Emerald-green cursor-pointer line-through">Website Bisnis Kustom</li>
+              <li className="hover:text-Emerald-green cursor-pointer line-through">Aplikasi Android & iOS</li>
               <li className="hover:text-Emerald-green cursor-pointer"><Link to={"LandingPage"} onClick={() => {
                 setIsOpen(false)
                 setShowMobileDropdown(false)
-                }}>Landing Page</Link></li>
-              <li className="hover:text-Emerald-green cursor-pointer">Website Toko Online</li>
-              <li className="hover:text-Emerald-green cursor-pointer">Meta Ads</li>
-              <li className="hover:text-Emerald-green cursor-pointer"><Link to="G-ads" onClick={() => {
+              }}>Landing Page</Link></li>
+              <li className="hover:text-Emerald-green cursor-pointer line-through">Website Toko Online</li>
+              <li className="hover:text-Emerald-green cursor-pointer line-through">Meta Ads</li>
+              <li className="hover:text-Emerald-green cursor-pointer line-through"><Link to="G-ads" onClick={() => {
                 setIsOpen(false)
                 setShowMobileDropdown(false)
-                }}>Google Ads</Link></li>
-              <li className="hover:text-Emerald-green cursor-pointer">Tips N Trick SEO</li>
-              <li className="hover:text-Emerald-green cursor-pointer">Jasa Writing</li>
+              }}>Google Ads</Link></li>
+              <li className="hover:text-Emerald-green cursor-pointer line-through">Tips N Trick SEO</li>
+              <li className="hover:text-Emerald-green cursor-pointer line-through">Jasa Writing</li>
             </ul>
           )}
 
@@ -130,7 +135,7 @@ export default function Navbar() {
             className="hover:text-Emerald-green cursor-pointer transition duration-300"
             onClick={() => setIsOpen(false)}
           >
-            Karya
+            <Link to="Portfolio">Karya</Link>
           </li>
           <li
             className="hover:text-Emerald-green cursor-pointer transition duration-300"

@@ -14,6 +14,7 @@ import Carousel from '../Component/carousel';
 import Sinefolis from '../assets/SineFolis.png';
 import VsTravel from '../assets/VsTravel.png';
 import FtbwCosmetic from '../assets/ftbw.png';
+import UID from "../assets/UrusIjinUsaha.png"
 import VideoCarousel from '../Component/vidCarousel';
 import { div } from 'framer-motion/client';
 import Footer from '../Component/Footer';
@@ -21,6 +22,7 @@ import Blog1 from '../assets/Blogs/Blog1.png';
 import Blog2 from '../assets/Blogs/Blog2.png';
 import Blog3 from '../assets/Blogs/Blog3.png';
 import TextTestimonials from '../Component/TextTestimonial';
+import Tooltip from '../Component/tooltip';
 
 
 
@@ -42,7 +44,7 @@ const Home = () => {
         gridOuter: "bg-Forest-green w-screen h-fit px-10 lg:px-20 py-10 space-y-10",
 
         rectangles: "bg-white w-full h-fit px-5 py-5 rounded-xl ",
-        buttonRound: "rounded-full px-6 py-3 border border-black text-black transform duration-300 bg-white hover:bg-Emerald-green hover:border-white hover:text-white ",
+        buttonRound: "w-60 grid place-items-center rounded-full px-2 py-3 border border-black text-black transform duration-300 bg-white hover:bg-Emerald-green hover:border-white hover:text-white ",
 
         Blog: "bg-Forest-green grid place-items-center py-10 px-5 w-full h-full space-y-5 text-center",
         paragraf: "w-auto md:w-fit text-wrap text-center text-gray-500 text-sm lg:text-base",
@@ -62,6 +64,7 @@ const Home = () => {
         { id: 1, image: Sinefolis, title: "SineFolis Theatre", description: "Experience the magic of movies." },
         { id: 2, image: VsTravel, title: "VsTravel", description: "Travelling made easy." },
         { id: 3, image: FtbwCosmetic, title: "FTBW Cosmetics", description: "When beauty comes to life." },
+        { id: 4, image: UID, title: "UrusIjinUsahaID", description: "Opening new business' now made easier." },
 
     ];
 
@@ -98,15 +101,15 @@ const Home = () => {
             button: [
                 {
                     text: "Aplikasi Android",
-                    link: "https://App.cibubur.com"
+                    link: ""
                 },
                 {
                     text: "Aplikasi IOS",
-                    link: "https://App.IOS.com"
+                    link: ""
                 },
                 {
                     text: "Aplikasi Multi-platform",
-                    link: "https://App.multiplatform.com"
+                    link: ""
                 }
             ],
 
@@ -118,24 +121,24 @@ const Home = () => {
             description: "Ciptakan website yang menarik, responsif, adaptif, dan ramah SEO untuk meningkatkan visibilitas di mesin pencari serta mendukung penjualan bisnis Anda.",
             button: [
                 {
-                    text: "Toko Online",
-                    link: "https://App.cibubur.com"
-                },
-                {
-                    text: "Company Profile",
-                    link: "https://App.IOS.com"
-                },
-                {
                     text: "Landing Page",
                     link: "LandingPage"
                 },
                 {
+                    text: "Toko Online",
+                    link: ""
+                },
+                {
+                    text: "Company Profile",
+                    link: ""
+                },
+                {
                     text: "Sistem Informasi",
-                    link: "https://App.multiplatform.com"
+                    link: ""
                 },
                 {
                     text: "Kustom Website",
-                    link: "https://App.multiplatform.com"
+                    link: ""
                 },
             ],
         },
@@ -151,12 +154,8 @@ const Home = () => {
                 },
                 {
                     text: "Meta Ads",
-                    link: "https://App.IOS.com"
+                    link: ""
                 },
-                {
-                    text: "Management Social Media",
-                    link: "https://App.multiplatform.com"
-                }
             ],
         }
     ];
@@ -286,11 +285,21 @@ const Home = () => {
                                         </p>
                                         <div className='w-fit py-5 grid grid-cols-1 md:grid-cols-2 place-items-start gap-5'>
                                             {data.button.map((buttons, index2) => {
-                                                return (
-                                                    <Link to={buttons.link} className={className.buttonRound}>
-                                                        {buttons.text}
-                                                    </Link>
-                                                )
+                                                if(buttons.link == "") {
+                                                    return (
+                                                        <Tooltip message="Dalam Pengembangan 🚧">
+                                                            <p className={className.buttonRound}>
+                                                                {buttons.text}
+                                                            </p>
+                                                        </Tooltip>
+                                                    )
+                                                }else{
+                                                    return (
+                                                        <Link to={buttons.link} className={className.buttonRound}>
+                                                            {buttons.text}
+                                                        </Link>
+                                                    )
+                                                }
                                             })}
                                         </div>
                                     </div>

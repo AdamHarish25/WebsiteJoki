@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import logo from "../assets/greyscale.png";
 import React, { useState } from "react";
 
@@ -68,7 +69,7 @@ const Footer = () => {
             <p><a className={className.listTitle} href="mailto:adamharits25@gmail.com">adamharits25@gmail.com</a></p>
           </div>
 
-          <div>/* social medias */</div>
+          {/* <div>social medias</div> */}
         </div>
 
         <div className={className.box}>
@@ -91,7 +92,7 @@ const Footer = () => {
             <h1 className={className.boxTitle}>Untuk Umkm</h1>
             <ul>
               <li>
-                <a className={className.listTitle} href="">Landing page</a>
+                <Link className={className.listTitle} to="LandingPage">Landing page</Link>
               </li>
               <li>
                 <a className={className.listTitle} href="">Website Toko Online</a>
@@ -110,7 +111,7 @@ const Footer = () => {
                 <a className={className.listTitle} href="">Meta Ads</a>
               </li>
               <li>
-                <a className={className.listTitle} href="">Google Ads</a>
+                <Link className={className.listTitle} to="G-ads">Google Ads</Link>
               </li>
               <li>
                 <a className={className.listTitle} href="">Management Media Sosial</a>
