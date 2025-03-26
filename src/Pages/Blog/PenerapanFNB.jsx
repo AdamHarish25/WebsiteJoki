@@ -1,4 +1,5 @@
 
+import { useEffect } from "react";
 import Blog_2 from "../../assets/Blogs/Blog2.png";
 import vlog from "../../assets/Blogs/Blog2/Vloggin.jpg";
 
@@ -11,6 +12,10 @@ const Blog2 = () => {
         subtitle: "text-gray-500 text-center"
 
     }
+
+    useEffect(() => {
+        document.title = "WebsiteJokiID | Tips buat anda yang terjun pada dunia F&B"
+    }, []);
 
     return (
         <div className={className.container}>

@@ -23,6 +23,7 @@ import Blog2 from '../assets/Blogs/Blog2.png';
 import Blog3 from '../assets/Blogs/Blog3.png';
 import TextTestimonials from '../Component/TextTestimonial';
 import Tooltip from '../Component/tooltip';
+import { useEffect } from 'react';
 
 
 
@@ -56,6 +57,10 @@ const Home = () => {
         cardPadding: "px-8 py-5 space-y-5",
        
     };
+
+    useEffect(() => {
+        document.title = "WebsiteJokiID | Solusi Digital Bisnis Anda"
+    }, []);
 
     const gifUrl = imgHead + "?noCache=" + new Date().getTime();
 

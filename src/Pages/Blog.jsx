@@ -2,6 +2,7 @@ import { Link } from 'react-router';
 import Blog1 from '../assets/Blogs/Blog1.png';
 import Blog2 from '../assets/Blogs/Blog2.png';
 import Blog3 from '../assets/Blogs/Blog3.png';
+import { useEffect } from 'react';
 
 const Blog = () => {
     const className = {
@@ -19,30 +20,34 @@ const Blog = () => {
 
     };
 
+    useEffect(() => {
+        document.title = "WebsiteJokiID | Belajar lah hingga ke negeri cina"
+    }, []);
+
 
     const BlogData = [
-            {
-                title: "10 Contoh SEO di Bidang IT",
-                description: "10 contoh SEO yang terbukti ampuh buat bisnis IT—langsung praktik dan hasilnya terasa! Cek tips-tipsnya di artikel ini.",
-                date: "20 February 2025",
-                img: Blog1,
-                link: "../Blog1"
-            },
-            {
-                title: "Contoh SEO di Bidang F&B",
-                description: "Bikin bisnis F&B lo makin gampang ditemuin di Google! Cek 10 contoh SEO simpel yang bisa naikin traffic dan narik pelanggan baru.",
-                date: "20 March 2025",
-                img: Blog2,
-                link: "../Blog2"
-            },
-            {
-                title: "Contoh SEO di Bidang Selling",
-                description: "Jualan online makin susah bersaing? Tenang, cek 10 contoh SEO khusus buat ningkatin penjualan dan bikin produk lo makin gampang ditemuin calon pembeli!",
-                date: "20 April 2025",
-                img: Blog3,
-                link: "../Blog3"
-            }
-        ]
+        {
+            title: "10 Contoh SEO di Bidang IT",
+            description: "10 contoh SEO yang terbukti ampuh buat bisnis IT—langsung praktik dan hasilnya terasa! Cek tips-tipsnya di artikel ini.",
+            date: "20 February 2025",
+            img: Blog1,
+            link: "../Blog1"
+        },
+        {
+            title: "Contoh SEO di Bidang F&B",
+            description: "Bikin bisnis F&B lo makin gampang ditemuin di Google! Cek 10 contoh SEO simpel yang bisa naikin traffic dan narik pelanggan baru.",
+            date: "20 March 2025",
+            img: Blog2,
+            link: "../Blog2"
+        },
+        {
+            title: "Contoh SEO di Bidang Selling",
+            description: "Jualan online makin susah bersaing? Tenang, cek 10 contoh SEO khusus buat ningkatin penjualan dan bikin produk lo makin gampang ditemuin calon pembeli!",
+            date: "20 April 2025",
+            img: Blog3,
+            link: "../Blog3"
+        }
+    ]
 
     return (
         <div className={className.container}>

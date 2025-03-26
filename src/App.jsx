@@ -1,4 +1,4 @@
-import { useState } from 'react'
+
 import './App.css'
 import { Route, Routes } from 'react-router';
 import Solution from './Pages/Solusi';
@@ -12,9 +12,9 @@ import Blog2 from './Pages/Blog/PenerapanFNB';
 import Blog3 from './Pages/Blog/PenerapanSelling';
 import LandingPage from './Pages/Services/landingpeg';
 import Footer from './Component/Footer';
-import WhatsappButton from './Component/WAFloatButton';
+
 import GoogleSEO from './Pages/Services/GoogleSeo';
-import { Webchat } from '@botpress/webchat';
+
 import WebCHAT from './Component/Webchat';
 
 function App() {

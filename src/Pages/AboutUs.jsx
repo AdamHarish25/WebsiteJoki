@@ -1,6 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 const AboutUs = () => {
+
+  useEffect(() => {
+    document.title = "WebsiteJokiID | Sejarah kita yang buat, kalian yang baca"
+  }, []);
+
   return (
     <div className="bg-white text-gray-700 font-sans pt-28">
       {/* Hero Section */}

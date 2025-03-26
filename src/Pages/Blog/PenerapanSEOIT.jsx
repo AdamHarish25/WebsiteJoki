@@ -1,4 +1,5 @@
 
+import { useEffect } from "react";
 import Blog_1 from "../../assets/Blogs/Blog1.png";
 import AI from "../../assets/Blogs/Blog1/AIassist.jpg";
 
@@ -11,6 +12,10 @@ const Blog1 = () => {
         subtitle: "text-gray-500 text-center"
 
     }
+
+    useEffect(() => {
+        document.title = "WebsiteJokiID | Tips buat anda yang terjun pada dunia IT Marketing"
+    }, []);
 
     return (
         <div className={className.container}>

@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import Sinefolis from '../assets/BrandSupport/5.png';
 import VsTravel from '../assets/BrandSupport/6.png';
 import FtbwCosmetic from '../assets/BrandSupport/7.png';
@@ -16,6 +17,10 @@ const Portfolio = () => {
         { id: 4, image: UID },
 
     ];
+
+    useEffect(() => {
+        document.title = "WebsiteJokiID | Kerjaan berat kita yang buat"
+    }, []);
 
 
     return (

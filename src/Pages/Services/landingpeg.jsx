@@ -1,7 +1,7 @@
 import landpage from "../../assets/Landingpej.png";
-import feature1 from "../../assets/DesignCreative.png";    
-import feature2 from "../../assets/ContentWriting.png";      
-import feature3 from "../../assets/digitalIntergration.png";       
+import feature1 from "../../assets/DesignCreative.png";
+import feature2 from "../../assets/ContentWriting.png";
+import feature3 from "../../assets/digitalIntergration.png";
 
 import logo7 from '../../assets/BrandSupport/fashThrift.png';
 import logo2 from '../../assets/BrandSupport/Joys.png';
@@ -11,7 +11,7 @@ import logo5 from '../../assets/BrandSupport/UrusIUsaha.png';
 import logo6 from '../../assets/BrandSupport/VsTravel.png';
 import logo1 from '../../assets/BrandSupport/google.png';
 import logo8 from '../../assets/BrandSupport/ftbw.png';
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router";
 
 const LandingPage = () => {
@@ -19,31 +19,35 @@ const LandingPage = () => {
     const [isClicked2, setIsClicked2] = useState(false);
 
     const LogoMap = [
-            {  
-                logo: logo8
-            },
-            {
-                logo: logo1
-            },
-            {
-                logo: logo2
-            },
-            {
-                logo: logo3
-            },
-            {
-                logo: logo4
-            },
-            {
-                logo: logo5
-            },
-            {
-                logo: logo6
-            },
-            {
-                logo: logo7
-            },
-        ];
+        {
+            logo: logo8
+        },
+        {
+            logo: logo1
+        },
+        {
+            logo: logo2
+        },
+        {
+            logo: logo3
+        },
+        {
+            logo: logo4
+        },
+        {
+            logo: logo5
+        },
+        {
+            logo: logo6
+        },
+        {
+            logo: logo7
+        },
+    ];
+
+    useEffect(() => {
+        document.title = "WebsiteJokiID | Kerjaan berat kita yang buat"
+    }, []);
 
     const className = {
         container: "w-full h-auto font-sans",
@@ -64,7 +68,7 @@ const LandingPage = () => {
             <section className={`${className.section} flex flex-col-reverse md:flex-row justify-center gap-10 items-center`}>
                 <div className="md:w-full text-left">
                     <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
-                        Jasa Pembuatan <span className={className.highlight}>Landing Page Profesional</span> 
+                        Jasa Pembuatan <span className={className.highlight}>Landing Page Profesional</span>
                     </h1>
                     <p className="text-gray-600 text-lg mb-6">
                         Optimalkan bisnis Anda dengan jasa pembuatan landing page modern, cepat, dan responsif dengan <b className={className.highlight}>WebsiteJokiID</b>. Dirancang secara profesional untuk meningkatkan konversi dan penjualan !

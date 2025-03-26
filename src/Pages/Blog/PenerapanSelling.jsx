@@ -1,4 +1,5 @@
 
+import { useEffect } from "react";
 import Blog_3 from "../../assets/Blogs/Blog3.png";
 import photProd from "../../assets/Blogs/Blog3/PhotoProduct.jpg";
 
@@ -11,6 +12,10 @@ const Blog3 = () => {
         subtitle: "text-gray-500 text-center"
 
     }
+
+    useEffect(() => {
+        document.title = "WebsiteJokiID | Tips buat anda yang terjun pada selling e-commerce"
+    }, []);
 
     return (
         <div className={className.container}>
@@ -58,7 +63,7 @@ const Blog3 = () => {
                 </p>
 
                 <div>
-                    <img src={photProd} className={className.img}/>
+                    <img src={photProd} className={className.img} />
                     <p className={className.subtitle}>
                         Illustrasi Pexels.com
                     </p>
@@ -97,7 +102,7 @@ const Blog3 = () => {
                             fontWeight: 'bold',
                         }}
                     >
-                        [link lo]   
+                        [link lo]
                     </a>{' '}
                     atau DM gue langsung. Siapa tau cocok, dan toko lo bisa makin gacor bareng gue! 🚀
 

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import seoG from "../../assets/GoogleAds.png";
 import logo7 from '../../assets/BrandSupport/fashThrift.png';
 import logo2 from '../../assets/BrandSupport/Joys.png';
@@ -42,6 +42,10 @@ export default function GoogleAdsPage() {
             logo: logo7
         },
     ];
+
+    useEffect(() => {
+        document.title = "WebsiteJokiID | Pasarkan produk anda dengan orang yang professional"
+    }, []);
 
     return (
         <div className="font-sans text-gray-700 pt-32">
