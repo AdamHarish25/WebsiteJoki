@@ -42,9 +42,9 @@ const Home = () => {
         img: "h-full w-full object-cover",
         scrollingLogo: "overflow-x-auto bg-Forest-green py-10 flex gap-10 lg:gap-16 px-10 items-center w-full h-fit",
         list: "w-full space-y-5 list-none",
-        gridOuter: "bg-Forest-green w-screen h-fit px-10 lg:px-20 py-10 space-y-10",
+        gridOuter: "bg-Forest-green w-screen h-fit px-7 md:px-10 lg:px-20 py-10 space-y-10",
 
-        rectangles: "bg-white w-full h-fit px-5 py-5 rounded-xl ",
+        rectangles: "bg-white w-full h-fit px-2 md:px-5 py-5 rounded-xl ",
         buttonRound: "w-60 grid place-items-center rounded-full px-2 py-3 border border-black text-black transform duration-300 bg-white hover:bg-Emerald-green hover:border-white hover:text-white ",
 
         Blog: "bg-Forest-green grid place-items-center py-10 px-5 w-full h-full space-y-5 text-center",
@@ -317,7 +317,7 @@ const Home = () => {
             </div>
 
             <div className='grid place-items-center py-10'>
-                <div className="w-3/4 lg:w-full lg:max-w-4xl p-12 rounded-[40px] text-white text-center bg-gradient-to-r from-[#2ECC71] via-[#27AE60] to-[#219150] shadow-2xl relative overflow-hidden">
+                <div className="w-3/4 lg:w-full lg:max-w-4xl px-5 py-10 lg:p-12 rounded-[40px] text-white text-center bg-gradient-to-r from-[#2ECC71] via-[#27AE60] to-[#219150] shadow-2xl relative overflow-hidden">
 
                     <div className="absolute top-0 left-0 w-full h-full bg-white opacity-5 pointer-events-none mix-blend-overlay"></div>
 

@@ -51,7 +51,7 @@ export default function Carousel({ slides }) {
             <img
               src={slides[current].image}
               alt={slides[current].title}
-              className="absolute inset-0 w-full h-full object-cover rounded-lg"
+              className="absolute inset-0 w-full h-full object-right object-cover rounded-lg"
             />
             <div className="absolute lg:left-20 bg-black bg-opacity-50 p-4 rounded-lg">
               <h2 className="text-2xl font-bold">{slides[current].title}</h2>

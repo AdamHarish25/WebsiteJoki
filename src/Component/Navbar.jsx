@@ -122,7 +122,7 @@ export default function Navbar() {
               }}>Landing Page</Link></li>
               <li className="hover:text-Emerald-green cursor-pointer line-through">Website Toko Online</li>
               <li className="hover:text-Emerald-green cursor-pointer line-through">Meta Ads</li>
-              <li className="hover:text-Emerald-green cursor-pointer line-through"><Link to="G-ads" onClick={() => {
+              <li className="hover:text-Emerald-green cursor-pointer"><Link to="G-ads" onClick={() => {
                 setIsOpen(false)
                 setShowMobileDropdown(false)
               }}>Google Ads</Link></li>
