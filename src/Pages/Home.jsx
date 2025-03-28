@@ -36,7 +36,7 @@ const Home = () => {
         highlight: "text-Emerald-green",
         lowlight: "text-xl lg:text-3xl",
         grid: "w-full h-auto place-items-center gap-10 grid grid-cols-1 lg:grid-cols-2 pt-20 px-10 ",
-        button: "px-10 py-5 bg-Emerald-green font-medium text-white rounded-lg transition-transform duration-300 ease-in-out hover:scale-105 hover:bg-emerald-700",
+        button: "block w-fit px-10 py-5 bg-Emerald-green font-medium text-white rounded-lg transition-transform duration-300 ease-in-out hover:scale-105 hover:bg-emerald-700",
         paraBox: "w-full space-y-6 order-2 lg:order-1",
         imgBox: "order-1 lg:order-2 w-full md:w-3/4 grid place-items-end h-full p-10",
         img: "w-full object-cover",

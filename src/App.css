@@ -1257,14 +1257,14 @@ video {
      object-fit: cover;
 }
 
-.object-right {
-  -o-object-position: right;
-     object-position: right;
-}
-
 .object-left {
   -o-object-position: left;
      object-position: left;
+}
+
+.object-right {
+  -o-object-position: right;
+     object-position: right;
 }
 
 .p-10 {
