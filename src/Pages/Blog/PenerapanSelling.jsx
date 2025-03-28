@@ -93,7 +93,7 @@ const Blog3 = () => {
                     Kalau lo butuh partner buat nulis artikel SEO-friendly, riset keyword, sampe naikin performa SEO toko atau website lo secara konsisten, gue bisa bantu.
                     Gue udah bantuin banyak seller dan bisnis UKM buat naikin traffic organik dan nambah closing tanpa harus keluar budget gede buat ads tiap bulan.<br /><br />
 
-                    ➡️ Mau ngobrol atau brainstorming gratis dulu? Cuss, klik di sini{' '}
+                    ➡️ Mau ngobrol atau brainstorming gratis dulu? Cuss, {' '}
                     <a
                         href="https://wa.me/6285179808325"
                         style={{
@@ -102,9 +102,9 @@ const Blog3 = () => {
                             fontWeight: 'bold',
                         }}
                     >
-                        [link lo]
+                        klik di sini
                     </a>{' '}
-                    atau DM gue langsung. Siapa tau cocok, dan toko lo bisa makin gacor bareng gue! 🚀
+                    atau DM gue langsung melalui Customer Service AI Kami. Siapa tau cocok, dan toko lo bisa makin gacor bareng gue! 🚀
 
 
                 </p>

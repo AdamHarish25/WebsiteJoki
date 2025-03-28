@@ -196,9 +196,9 @@ const Home = () => {
                     <p>
                         Kami adalah mitra teknologi yang mengembangkan aplikasi kustom, website, dan SEO Google sesuai kebutuhan untuk mengoptimalkan potensi bisnis Anda.
                     </p>
-                    <button className={className.button}>
+                    <Link to="https://wa.me/6285179808325" className={className.button}>
                         Konsultasi Gratis -{`>`}
-                    </button>
+                    </Link>
                 </div>
 
 
