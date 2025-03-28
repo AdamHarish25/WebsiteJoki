@@ -15,7 +15,7 @@ export default function CardGrid({ slides }) {
           <img
             src={slide.image}
             alt=""
-            className="absolute inset-0 w-full h-full object-cover rounded-lg"
+            className="absolute inset-0 w-full h-full object-cover rounded-lg object-left"
           />
         </motion.div>
       ))}

@@ -1262,6 +1262,11 @@ video {
      object-position: right;
 }
 
+.object-left {
+  -o-object-position: left;
+     object-position: left;
+}
+
 .p-10 {
   padding: 2.5rem;
 }

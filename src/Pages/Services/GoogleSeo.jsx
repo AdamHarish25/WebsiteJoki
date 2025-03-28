@@ -10,6 +10,7 @@ import logo1 from '../../assets/BrandSupport/google.png';
 import logo8 from '../../assets/BrandSupport/ftbw.png';
 
 import webAnalytics from '../../assets/WebMarketingIllustration.png';
+import { Link } from "react-router";
 
 export default function GoogleAdsPage() {
     const [isClicked, setIsClicked] = useState(false);
@@ -59,9 +60,16 @@ export default function GoogleAdsPage() {
                         Buat bisnis Anda tampil di halaman 1 Google dan dapatkan lebih banyak peluang
                         untuk meningkatkan penjualan dari lead atau prospek berkualitas.
                     </p>
-                    <button className="px-6 py-3 bg-Emerald-green text-white rounded-lg shadow hover:bg-white hover:text-Emerald-green transition">
+                    <Link
+                        to=""
+                        onClick={(e) => {
+                            e.preventDefault();
+                            document.getElementById("paket")?.scrollIntoView({ behavior: "smooth" });
+                        }}
+                        className="px-6 py-3 bg-Emerald-green text-white rounded-lg shadow hover:bg-white hover:text-Emerald-green transition"
+                    >
                         Pilih Paket ➔
-                    </button>
+                    </Link>
                 </div>
                 <div className="flex-1">
                     <img
@@ -137,7 +145,7 @@ export default function GoogleAdsPage() {
             </section>
 
             {/* Paket Section */}
-            <section className="py-16 px-6 md:px-20">
+            <section id="paket" className="py-16 px-6 md:px-20">
                 <h2 className="text-3xl font-bold text-center mb-10">
                     Pilihan Paket <span className="text-Emerald-green">Google Ads</span>
                 </h2>
@@ -153,9 +161,9 @@ export default function GoogleAdsPage() {
                             <li>✔️ Optimasi harian</li>
                             <li>✔️ Laporan mingguan</li>
                         </ul>
-                        <button className="w-full py-2 bg-Emerald-green text-white rounded hover:bg-white hover:text-Emerald-green">
+                        <Link to="https://wa.me/6285179808325" className="w-full px-5 py-2 bg-Emerald-green text-white rounded hover:bg-white hover:text-Emerald-green">
                             Pesan Google Ads
-                        </button>
+                        </Link>
                     </div>
 
                     {/* Standard Paket */}
@@ -169,9 +177,9 @@ export default function GoogleAdsPage() {
                             <li>✔️ Laporan mingguan</li>
                             <li>✔️ Penambahan CTA custom</li>
                         </ul>
-                        <button className="w-full py-2 bg-Emerald-green text-white rounded hover:bg-white hover:text-Emerald-green">
+                        <Link to="https://wa.me/6285179808325" className="w-full px-5 py-2 bg-Emerald-green text-white rounded hover:bg-white hover:text-Emerald-green">
                             Pesan Google Ads
-                        </button>
+                        </Link>
                     </div>
                 </div>
             </section>
@@ -218,9 +226,9 @@ export default function GoogleAdsPage() {
                         Hubungi kami sekarang untuk mendapatkan layanan terbaik dan iklan Google Ads dari WebsiteJokiID
                         untuk meningkatkan penjualan yang lebih baik!
                     </p>
-                    <button className="px-6 py-3 bg-white text-Emerald-green rounded hover:bg-Emerald-green hover:text-white transition">
+                    <Link to="https://wa.me/6285179808325" className="px-6 py-3 bg-white text-Emerald-green rounded hover:bg-Emerald-green hover:text-white transition">
                         Konsultasi Gratis
-                    </button>
+                    </Link>
                 </section>
             </div>
 
