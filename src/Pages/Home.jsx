@@ -331,9 +331,9 @@ const Home = () => {
                         bisnis Anda ke level yang lebih tinggi!
                     </p>
 
-                    <button className="px-8 py-4 bg-white text-[#2ECC71] font-semibold rounded-full shadow-md hover:bg-[#2ECC71] hover:text-white transition-all duration-300 ease-in-out">
+                    <Link to="https://wa.me/6285179808325" className="px-8 py-4 bg-white text-[#2ECC71] font-semibold rounded-full shadow-md hover:bg-[#2ECC71] hover:text-white transition-all duration-300 ease-in-out">
                         Konsultasi Sekarang
-                    </button>
+                    </Link>
                 </div>
 
             </div>

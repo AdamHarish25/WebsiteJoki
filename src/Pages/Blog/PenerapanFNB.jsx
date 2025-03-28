@@ -98,7 +98,7 @@ const Blog2 = () => {
 
                     👉{' '}
                     <a
-                        href="https://example.com"
+                        href="https://wa.me/6285179808325"
                         style={{
                             color: '#007bff',
                             textDecoration: 'none',

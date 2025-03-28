@@ -95,7 +95,7 @@ const Blog1 = () => {
 
                     Mau ngobrol santai dulu? Yuk, kita diskusiin strategi SEO yang cocok buat bisnis IT lo.<br /><br />
 
-                    👉 <a href="https://example.com" style={{ color: '#007bff', textDecoration: 'none' }}>
+                    👉 <a href="https://wa.me/6285179808325" style={{ color: '#007bff', textDecoration: 'none' }}>
                         Klik di sini
                     </a>{' '}
                     buat mulai ngobrol, atau langsung atur jadwal buat kolaborasi.<br /><br />

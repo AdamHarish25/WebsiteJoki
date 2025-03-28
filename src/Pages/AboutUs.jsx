@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router';
 
 const AboutUs = () => {
 
@@ -133,7 +134,7 @@ const AboutUs = () => {
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4">Punya Project Baru?</h2>
           <p className="text-gray-500 mb-8">Yuk, diskusiin kebutuhan website kamu sama tim kami sekarang!</p>
-          <button className="bg-Emerald-green text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-Emerald-green transition">Hubungi Kami</button>
+          <Link to="https://wa.me/6285179808325" className="bg-Emerald-green text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-Emerald-green transition">Hubungi Kami</Link>
         </div>
       </section>
     </div>
