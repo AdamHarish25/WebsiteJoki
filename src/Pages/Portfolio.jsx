@@ -7,7 +7,7 @@ import CardGrid from '../Component/cardgrid';
 
 const Portfolio = () => {
     const className = {
-        container: "w-full h-full py-28"
+        container: "w-full h-full py-28 px-0 lg:px-20"
     };
 
     const slides = [
@@ -27,7 +27,7 @@ const Portfolio = () => {
         <div className={className.container}>
             <div className="relative bg-gradient-to-b from-purple-50 to-white py-16 px-6 text-center">
                 <h1 className="text-3xl md:text-5xl font-bold text-gray-800">Karya <span className="text-Emerald-green">WebsiteJokiID</span></h1>
-                <p className="mt-4 text-lg max-w-2xl mx-auto text-gray-500">
+                <p className="mt-4 max-w-4xl text-center mx-auto text-gray-500 ">
                     WebsiteJokiID, mitra terpercaya sejak 2020, siap membantu bisnis, akademisi, dan individu dalam membangun kehadiran digital yang profesional. Kami menawarkan layanan pembuatan website, pemeliharaan, dan konsultasi branding digital untuk meningkatkan daya saing Anda di dunia online.
                 </p>
             </div>

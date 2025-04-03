@@ -9,7 +9,7 @@ import logo1 from '../assets/BrandSupport/google.png';
 import app from '../assets/appdev.webp';
 import marketing from '../assets/marketing.webp';
 import webdev from '../assets/webdev.webp';
-import { Link } from 'react-router';
+import { Link, useLocation } from 'react-router';
 import Carousel from '../Component/carousel';
 import Sinefolis from '../assets/SineFolis.png';
 import VsTravel from '../assets/VsTravel.png';
@@ -30,12 +30,14 @@ import { useEffect } from 'react';
 
 
 const Home = () => {
+    
+    const location = useLocation();
     const className = {
-        container: "w-screen h-aut bg-gray-100 overflow-x-hidden",
+        container: "w-screen h-auto bg-gray-100 overflow-x-hidden",
         title: "text-3xl lg:text-5xl font-bold",
         highlight: "text-Emerald-green",
         lowlight: "text-xl lg:text-3xl",
-        grid: "w-full h-auto place-items-center gap-10 grid grid-cols-1 lg:grid-cols-2 pt-20 px-10 ",
+        grid: "w-full h-auto place-items-center gap-10 grid grid-cols-1 lg:grid-cols-2 pt-20 px-10 lg:px-20 ",
         button: "block w-fit px-10 py-5 bg-Emerald-green font-medium text-white rounded-lg transition-transform duration-300 ease-in-out hover:scale-105 hover:bg-emerald-700",
         paraBox: "w-full space-y-6 order-2 lg:order-1",
         imgBox: "order-1 lg:order-2 w-full md:w-3/4 grid place-items-end h-full p-10",
@@ -189,7 +191,7 @@ const Home = () => {
         }
     ]
     return (
-        <div className={className.container}>
+        <div key={location.key} className={className.container}>
             <div className={`${className.grid} pb-10`}>
                 <div className={className.paraBox}>
                     <h1 className={className.title}>Level up Bisnis Anda dengan <br /> <span className={className.highlight}>Website, Google ADS, & Aplikasi Sesuai kebutuhanmu!</span></h1>
@@ -389,7 +391,7 @@ const Home = () => {
                     })}
                 </div>
                 <div className="w-full grid place-items-center ">
-                    <Link className="px-10 py-3 bg-transparent border border-Emerald-green text-Emerald-green rounded-md hover:bg-Emerald-green hover:text-white transform duration-300">
+                    <Link to="Blog" className="px-10 py-3 bg-transparent border border-Emerald-green text-Emerald-green rounded-md hover:bg-Emerald-green hover:text-white transform duration-300">
                         Lihat lebih banyak
                     </Link>
                 </div>

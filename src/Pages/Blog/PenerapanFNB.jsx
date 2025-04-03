@@ -2,16 +2,17 @@
 import { useEffect } from "react";
 import Blog_2 from "../../assets/Blogs/Blog2.png";
 import vlog from "../../assets/Blogs/Blog2/Vloggin.jpg";
+import BlogSidebar from "../../Component/BlogSideBar";
 
 const Blog2 = () => {
     const className = {
-        container: "w-full h-full pt-28 space-y-8 px-10",
-        img: "w-full h-auto rounded-2xl shadow-md",
-        title: "text-xl font-medium",
-        article: "w-full lg:w-3/5 space-y-8 py-10",
-        subtitle: "text-gray-500 text-center"
-
-    }
+      container:
+        "w-full h-full pt-28 space-y-8 px-5 lg:px-20 gap-10 flex flex-col lg:flex-row",
+      img: "w-full h-auto rounded-2xl shadow-md",
+      title: "text-xl font-medium",
+      article: "w-full lg:w-3/5 space-y-8 py-10",
+      subtitle: "text-gray-500 text-center",
+    };
 
     useEffect(() => {
         document.title = "WebsiteJokiID | Tips buat anda yang terjun pada dunia F&B"
@@ -118,6 +119,8 @@ const Blog2 = () => {
                 </p>
 
             </div>
+
+            <BlogSidebar/>
         </div>
     )
 }

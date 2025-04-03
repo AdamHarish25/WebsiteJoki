@@ -62,13 +62,13 @@ export default function Carousel({ slides }) {
       </div>
       <button
         onClick={prevSlide}
-        className="absolute h-full w-20 left-0 top-1/2 transform -translate-y-1/2 text-black hover:bg-slate-200/60 transition-all duration-200"
+        className="absolute h-full w-20 left-0 lg:left-60 top-1/2 transform -translate-y-1/2 text-black hover:bg-slate-200/60 transition-all duration-200"
       >
         &#10094;
       </button>
       <button
         onClick={nextSlide}
-        className="absolute h-full w-20 right-0 top-1/2 transform -translate-y-1/2 text-black hover:bg-slate-200/60 transition-all duration-200"
+        className="absolute h-full w-20 right-0 lg:right-60 top-1/2 transform -translate-y-1/2 text-black hover:bg-slate-200/60 transition-all duration-200"
       >
         &#10095;
       </button>

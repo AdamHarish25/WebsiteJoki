@@ -1,6 +1,6 @@
 
 import './App.css'
-import { Route, Routes } from 'react-router';
+import { Route, Routes, useLocation } from 'react-router';
 import Solution from './Pages/Solusi';
 import Portfolio from './Pages/Portfolio';
 import AboutUs from './Pages/AboutUs';
@@ -16,32 +16,39 @@ import Footer from './Component/Footer';
 import GoogleSEO from './Pages/Services/GoogleSeo';
 
 import WebCHAT from './Component/Webchat';
+import Blog4 from './Pages/Blog/BisnisdariWebsite';
+import ScrollToTop from './Component/scrollToTop';
 
 function App() {
 
   return (
-    <div className='relative'>
+    <div className="relative">
+      <ScrollToTop/>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="Solution" element={<Solution />} />
-        <Route path="Portfolio" element={<Portfolio />} />
-        <Route path="AboutUs" element={<AboutUs />} />
-        <Route path="Blog" element={<Blog />} />
-        <Route path='Blog1' element={<Blog1 />} />
-        <Route path='Blog2' element={<Blog2 />} />
-        <Route path='Blog3' element={<Blog3 />} />
-        <Route path="LandingPage" element={<LandingPage />} />
-        <Route path='G-ads' element={<GoogleSEO />} />
+        <Route path="/" element={<Home/>} />
+        <Route path="Solution" element={<Solution/>} />
+        <Route path="Portfolio" element={<Portfolio/>} />
+        <Route path="AboutUs" element={<AboutUs/>} />
+        <Route path="Blog" element={<Blog/>} />
+        <Route path="Blog1" element={<Blog1/>} />
+        <Route path="Blog2" element={<Blog2/>} />
+        <Route path="Blog3" element={<Blog3/>} />
+        <Route path="Blog4" element={<Blog4/>} />
+        <Route
+          path="LandingPage"
+          element={<LandingPage/>}
+        />
+        <Route path="G-ads" element={<GoogleSEO/>} />
       </Routes>
 
-      <div className='fixed bottom-5 right-5 h-fit w-60 z-10'>
+      <div className="fixed bottom-5 right-5 h-fit w-60 z-10">
         <WebCHAT />
       </div>
       {/* <WhatsappButton/> */}
       <Footer />
     </div>
-  )
+  );
 }
 
 export default App

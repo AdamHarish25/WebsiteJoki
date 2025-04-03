@@ -2,22 +2,25 @@ import { Link } from 'react-router';
 import Blog1 from '../assets/Blogs/Blog1.png';
 import Blog2 from '../assets/Blogs/Blog2.png';
 import Blog3 from '../assets/Blogs/Blog3.png';
+import Blog4 from "../assets/Blogs/Blog4.png";
+
 import { useEffect } from 'react';
 
 const Blog = () => {
     const className = {
-        container: "w-full h-full pt-24",
-        title: "text-3xl lg:text-5xl font-bold",
-        Blog: "bg-Forest-green grid place-items-center py-10 px-5 w-full h-full space-y-5 text-center",
-        paragraf: "w-auto md:w-fit text-wrap text-center text-gray-500 text-sm lg:text-base",
-        grid3: "w-full grid md:grid-cols-2 grid-cols-1 lg:grid-cols-3 gap-5 place-items-center",
-        card: "space-y-5 bg-white w-full h-full rounded-xl",
-        cardTitle: "text-2xl font-medium text-start",
-        cardDesc: "text-start",
-        cardImg: "object-cover w-full rounded-t-xl ",
-        cardPadding: "px-8 py-5 space-y-5",
-        highlight: "text-Emerald-green",
-
+      container: "w-full h-full pt-24",
+      title: "text-3xl lg:text-5xl font-bold ",
+      Blog: "bg-Forest-green grid place-items-center py-10 w-full h-full space-y-5 text-center px-5 lg:px-32",
+      paragraf:
+        "w-auto md:w-fit text-wrap text-center text-gray-500 text-sm lg:text-base max-w-4xl",
+      grid3:
+        "w-full grid md:grid-cols-2 grid-cols-1 lg:grid-cols-3 gap-5 place-items-center px-32",
+      card: "space-y-5 bg-white w-full h-full rounded-xl",
+      cardTitle: "text-2xl font-medium text-start",
+      cardDesc: "text-start",
+      cardImg: "object-cover w-full rounded-t-xl ",
+      cardPadding: "px-8 py-5 space-y-5",
+      highlight: "text-Emerald-green",
     };
 
     useEffect(() => {
@@ -26,28 +29,39 @@ const Blog = () => {
 
 
     const BlogData = [
-        {
-            title: "10 Contoh SEO di Bidang IT",
-            description: "10 contoh SEO yang terbukti ampuh buat bisnis IT—langsung praktik dan hasilnya terasa! Cek tips-tipsnya di artikel ini.",
-            date: "20 February 2025",
-            img: Blog1,
-            link: "../Blog1"
-        },
-        {
-            title: "Contoh SEO di Bidang F&B",
-            description: "Bikin bisnis F&B lo makin gampang ditemuin di Google! Cek 10 contoh SEO simpel yang bisa naikin traffic dan narik pelanggan baru.",
-            date: "20 March 2025",
-            img: Blog2,
-            link: "../Blog2"
-        },
-        {
-            title: "Contoh SEO di Bidang Selling",
-            description: "Jualan online makin susah bersaing? Tenang, cek 10 contoh SEO khusus buat ningkatin penjualan dan bikin produk lo makin gampang ditemuin calon pembeli!",
-            date: "20 April 2025",
-            img: Blog3,
-            link: "../Blog3"
-        }
-    ]
+      {
+        title: "10 Contoh SEO di Bidang IT",
+        description:
+          "10 contoh SEO yang terbukti ampuh buat bisnis IT—langsung praktik dan hasilnya terasa! Cek tips-tipsnya di artikel ini.",
+        date: "20 January 2025",
+        img: Blog1,
+        link: "../Blog1",
+      },
+      {
+        title: "Contoh SEO di Bidang F&B",
+        description:
+          "Bikin bisnis F&B lo makin gampang ditemuin di Google! Cek 10 contoh SEO simpel yang bisa naikin traffic dan narik pelanggan baru.",
+        date: "20 February 2025",
+        img: Blog2,
+        link: "../Blog2",
+      },
+      {
+        title: "Contoh SEO di Bidang Selling",
+        description:
+          "Jualan online makin susah bersaing? Tenang, cek 10 contoh SEO khusus buat ningkatin penjualan dan bikin produk lo makin gampang ditemuin calon pembeli!",
+        date: "20 March 2025",
+        img: Blog3,
+        link: "../Blog3",
+      },
+      {
+        title: "Mengapa Bisnismu perlu website professional di 2025?",
+        description:
+          "Punya website bikin bisnismu lebih terpercaya, gampang ditemukan, dan bisa menarik lebih banyak pelanggan. Masih ragu? Cari tahu kenapa website profesional itu penting banget buat bisnis lu di 2025🚀",
+        date: "1 April 2025",
+        img: Blog4,
+        link: "../Blog4",
+      },
+    ];
 
     return (
         <div className={className.container}>

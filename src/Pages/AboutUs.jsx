@@ -8,11 +8,11 @@ const AboutUs = () => {
   }, []);
 
   return (
-    <div className="bg-white text-gray-700 font-sans pt-28">
+    <div className="bg-white text-gray-700 font-sans pt-28 px-0 lg:px-20">
       {/* Hero Section */}
       <section className="relative bg-gradient-to-b from-purple-50 to-white py-16 px-6 text-center">
         <h1 className="text-3xl md:text-5xl font-bold text-gray-800">Tentang <span className="text-Emerald-green">WebsiteJokiID</span></h1>
-        <p className="mt-4 text-lg max-w-2xl mx-auto text-gray-500">
+        <p className="mt-4 max-w-2xl mx-auto text-gray-500">
           WebsiteJokiID hadir sejak 2020 untuk membantu pelaku bisnis, akademisi, dan personal meningkatkan kualitas digital mereka. Kami menyediakan layanan pembuatan website, maintenance, hingga konsultasi branding digital.
         </p>
       </section>

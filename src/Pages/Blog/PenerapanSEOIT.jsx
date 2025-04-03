@@ -2,16 +2,17 @@
 import { useEffect } from "react";
 import Blog_1 from "../../assets/Blogs/Blog1.png";
 import AI from "../../assets/Blogs/Blog1/AIassist.jpg";
+import BlogSidebar from "../../Component/BlogSideBar";
 
 const Blog1 = () => {
     const className = {
-        container: "w-full h-full pt-28 space-y-8 px-10",
-        img: "w-full h-auto rounded-2xl shadow-md",
-        title: "text-xl font-medium",
-        article: "w-full lg:w-3/5 space-y-8 py-10",
-        subtitle: "text-gray-500 text-center"
-
-    }
+      container:
+        "w-full h-full pt-28 space-y-8 px-5 lg:px-20 gap-10 flex flex-col lg:flex-row",
+      img: "w-full h-auto rounded-2xl shadow-md",
+      title: "text-xl font-medium",
+      article: "w-full lg:w-3/5 space-y-8 py-10",
+      subtitle: "text-gray-500 text-center",
+    };
 
     useEffect(() => {
         document.title = "WebsiteJokiID | Tips buat anda yang terjun pada dunia IT Marketing"
@@ -110,6 +111,8 @@ const Blog1 = () => {
 
 
             </div>
+
+            <BlogSidebar/>
         </div>
     )
 }

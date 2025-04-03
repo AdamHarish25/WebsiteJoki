@@ -49,7 +49,7 @@ export default function GoogleAdsPage() {
     }, []);
 
     return (
-        <div className="font-sans text-gray-700 pt-32">
+        <div className="font-sans text-gray-700 pt-32 px-0 lg:px-20">
             {/* Hero Section */}
             <section className="bg-white py-16 px-6 md:px-20 flex flex-col-reverse md:flex-row items-center justify-between gap-10">
                 <div className="flex-1">
@@ -138,7 +138,7 @@ export default function GoogleAdsPage() {
                         <ul className="space-y-4">
                             <li>✅ Pemberian laporan secara berkala</li>
                             <li>✅ Harga terjangkau</li>
-                            <li>✅ Update dengan perubahan Meta Ads</li>
+                            <li>✅ Update dengan perubahan kebijakan Google Ads</li>
                         </ul>
                     </div>
                 </div>

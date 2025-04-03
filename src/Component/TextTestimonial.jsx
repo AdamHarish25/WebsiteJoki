@@ -43,47 +43,47 @@ export default function TextTestimonials() {
     }, [hover, currentIndex]);
 
     return (
-        <div className="relative w-full flex justify-center items-center overflow-hidden">
+      <div className="relative w-full flex justify-center items-center overflow-hidden">
+        <div
+          className="flex transition-transform duration-500 ease-in-out"
+          style={{
+            transform: `translateX(-${currentIndex * 100}%)`,
+            display: "flex",
+            width: `${testimonials.length * 100}%`,
+          }}
+        >
+          {testimonials.map((testimonial, index) => (
             <div
-                className="flex transition-transform duration-500 ease-in-out"
-                style={{
-                    transform: `translateX(-${currentIndex * 100}%)`,
-                    display: "flex",
-                    width: `${testimonials.length * 100}%`,
-                }}
+              key={index}
+              className="w-full md:w-1/2 flex-shrink-0 flex flex-col items-center justify-center px-6"
+              style={{ minWidth: "100%", textAlign: "center" }}
             >
-                {testimonials.map((testimonial, index) => (
-                    <div
-                        key={index}
-                        className="w-full md:w-1/2 flex-shrink-0 flex flex-col items-center justify-center px-6"
-                        style={{ minWidth: "100%", textAlign: "center" }}
-                    >
-                        <div className="bg-white rounded-xl shadow-md p-6 w-full max-w-lg h-fit">
-                            <p className="text-lg italic text-gray-800 leading-relaxed">
-                                {testimonial.text}
-                            </p>
-                            <h4 className="font-semibold mt-2">{testimonial.author}</h4>
-                            <span className="text-sm text-gray-500">{testimonial.role}</span>
-                        </div>
-                    </div>
-                ))}
+              <div className="bg-white rounded-xl shadow-md p-6 w-full max-w-lg h-fit">
+                <p className="text-lg italic text-gray-800 leading-relaxed">
+                  {testimonial.text}
+                </p>
+                <h4 className="font-semibold mt-2">{testimonial.author}</h4>
+                <span className="text-sm text-gray-500">
+                  {testimonial.role}
+                </span>
+              </div>
             </div>
-
-            {/* Navigation Buttons */}
-            <button
-                className="absolute h-full w-20 left-0 top-1/2 transform -translate-y-1/2 text-black hover:bg-slate-200/60 transition-all duration-200"
-                onClick={handlePrev}
-            >
-                &#10094;
-            </button>
-            <button
-                className="absolute h-full w-20 right-0 top-1/2 transform -translate-y-1/2 text-black hover:bg-slate-200/60 transition-all duration-200"
-                onClick={handleNext}
-            >
-                &#10095;
-            </button>
+          ))}
         </div>
 
-
+        {/* Navigation Buttons */}
+        <button
+          className="absolute h-full w-20 left-0 lg:left-60 top-1/2 transform -translate-y-1/2 text-black hover:bg-slate-200/60 transition-all duration-200"
+          onClick={handlePrev}
+        >
+          &#10094;
+        </button>
+        <button
+          className="absolute h-full w-20 right-0 lg:right-60 top-1/2 transform -translate-y-1/2 text-black hover:bg-slate-200/60 transition-all duration-200"
+          onClick={handleNext}
+        >
+          &#10095;
+        </button>
+      </div>
     );
 }
