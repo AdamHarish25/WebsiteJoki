@@ -173,9 +173,12 @@ export default function GoogleAdsPage() {
                         <ul className="space-y-2 mb-4 text-sm">
                             <li>✔️ Setup account</li>
                             <li>✔️ Reset keyword dan audiens</li>
-                            <li>✔️ Optimasi harian</li>
+                            <li>✔️ Setup Tools Analytic</li>
                             <li>✔️ Laporan mingguan</li>
-                            <li>✔️ Penambahan CTA custom</li>
+                            <li>✔️ Penambahan CTA custom sesuai permintaan Client</li>
+                            <li>✔️ Pantauan perhari yang dapat menaikkan nilai Optimasi iklan</li>
+                            <li>✔️ Optimasi keywords" perhari</li>
+                            <li>✔️ Pemantauan Performa setiap 5 hari & Optimasi untuk memaksimalkan Penjualan anda!</li>
                         </ul>
                         <Link to="https://wa.me/6285179808325" className="w-full px-5 py-2 bg-Emerald-green text-white rounded hover:bg-white hover:text-Emerald-green">
                             Pesan Google Ads
@@ -207,7 +210,7 @@ export default function GoogleAdsPage() {
                             <li>✔️ Tidak melanggar hak cipta atau merk dagang</li>
                             <li>✔️ Menyediakan informasi kontak yang jelas (alamat, email, no. telepon)</li>
                             <li>✔️ Jasa yang tidak bersangkut paut dengan Jasa/Dokumen Pemerintah</li>
-
+                            <li>✔️ DILARANG KERAS memiliki kaitan dengan Promosi Judi Online / Semacamnya.</li>
                         </ul>
                     </div>
                 </div>
