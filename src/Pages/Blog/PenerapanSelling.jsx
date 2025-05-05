@@ -1,6 +1,6 @@
 
 import { useEffect } from "react";
-import Blog_3 from "../../assets/Blogs/Blog3.png";
+import Blog_3 from "../../assets/Blogs/Blog3.webp";
 import photProd from "../../assets/Blogs/Blog3/PhotoProduct.jpg";
 
 const Blog3 = () => {

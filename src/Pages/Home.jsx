@@ -1,26 +1,26 @@
 import imgHead from '../assets/Header3.gif';
-import logo7 from '../assets/BrandSupport/fashThrift.png';
-import logo2 from '../assets/BrandSupport/Joys.png';
-import logo3 from '../assets/BrandSupport/PI.png';
-import logo4 from '../assets/BrandSupport/Sinefolis.png';
-import logo5 from '../assets/BrandSupport/UrusIUsaha.png';
-import logo6 from '../assets/BrandSupport/VsTravel.png';
-import logo1 from '../assets/BrandSupport/google.png';
+import logo7 from '../assets/BrandSupport/fashThrift.webp';
+import logo2 from '../assets/BrandSupport/Joys.webp';
+import logo3 from '../assets/BrandSupport/PI.webp';
+import logo4 from '../assets/BrandSupport/Sinefolis.webp';
+import logo5 from '../assets/BrandSupport/UrusIUsaha.webp';
+import logo6 from '../assets/BrandSupport/VsTravel.webp';
+import logo1 from '../assets/BrandSupport/google.webp';
 import app from '../assets/appdev.webp';
 import marketing from '../assets/marketing.webp';
 import webdev from '../assets/webdev.webp';
 import { Link } from 'react-router';
 import Carousel from '../Component/carousel';
-import Sinefolis from '../assets/SineFolis.png';
-import VsTravel from '../assets/VsTravel.png';
-import FtbwCosmetic from '../assets/ftbw.png';
-import UID from "../assets/UrusIjinUsaha.png"
+import Sinefolis from '../assets/SineFolis.webp';
+import VsTravel from '../assets/VsTravel.webp';
+import FtbwCosmetic from '../assets/ftbw.webp';
+import UID from "../assets/UrusIjinUsaha.webp"
 import VideoCarousel from '../Component/vidCarousel';
 import { div } from 'framer-motion/client';
 import Footer from '../Component/Footer';
-import Blog1 from '../assets/Blogs/Blog1.png';
-import Blog2 from '../assets/Blogs/Blog2.png';
-import Blog3 from '../assets/Blogs/Blog3.png';
+import Blog1 from '../assets/Blogs/Blog1.webp';
+import Blog2 from '../assets/Blogs/Blog2.webp';
+import Blog3 from '../assets/Blogs/Blog3.webp';
 import TextTestimonials from '../Component/TextTestimonial';
 import Tooltip from '../Component/tooltip';
 import { useEffect } from 'react';
@@ -389,7 +389,7 @@ const Home = () => {
                     })}
                 </div>
                 <div className="w-full grid place-items-center ">
-                    <Link className="px-10 py-3 bg-transparent border border-Emerald-green text-Emerald-green rounded-md hover:bg-Emerald-green hover:text-white transform duration-300">
+                    <Link to={'Blog'} className="px-10 py-3 bg-transparent border border-Emerald-green text-Emerald-green rounded-md hover:bg-Emerald-green hover:text-white transform duration-300">
                         Lihat lebih banyak
                     </Link>
                 </div>

@@ -1,7 +1,7 @@
 import { Link } from 'react-router';
-import Blog1 from '../assets/Blogs/Blog1.png';
-import Blog2 from '../assets/Blogs/Blog2.png';
-import Blog3 from '../assets/Blogs/Blog3.png';
+import Blog1 from '../assets/Blogs/Blog1.webp';
+import Blog2 from '../assets/Blogs/Blog2.webp';
+import Blog3 from '../assets/Blogs/Blog3.webp';
 import { useEffect } from 'react';
 
 const Blog = () => {
