@@ -160,6 +160,7 @@ export default function GoogleAdsPage() {
                             <li>✔️ Setup analytic tools</li>
                             <li>✔️ Optimasi harian</li>
                             <li>✔️ Laporan mingguan</li>
+                            <li>✔️ Biaya maintenance selanjutnya: <s>1000k</s> <b>699k</b></li>
                         </ul>
                         <Link to="https://wa.me/6285179808325" className="w-full px-5 py-2 bg-Emerald-green text-white rounded hover:bg-white hover:text-Emerald-green">
                             Pesan Google Ads
@@ -179,6 +180,7 @@ export default function GoogleAdsPage() {
                             <li>✔️ Pantauan perhari yang dapat menaikkan nilai Optimasi iklan</li>
                             <li>✔️ Optimasi keywords" perhari</li>
                             <li>✔️ Pemantauan Performa setiap 5 hari & Optimasi untuk memaksimalkan Penjualan anda!</li>
+                            <li>✔️ Biaya maintenance selanjutnya: <s>2000k</s> <b>1.599k</b></li>
                         </ul>
                         <Link to="https://wa.me/6285179808325" className="w-full px-5 py-2 bg-Emerald-green text-white rounded hover:bg-white hover:text-Emerald-green">
                             Pesan Google Ads

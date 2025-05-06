@@ -37,7 +37,7 @@ export default function Navbar() {
                 <div>
                   <h4 className="font-bold mb-3">Untuk Bisnis</h4>
                   <ul className="space-y-2 text-sm">
-                    <li className="hover:text-Emerald-green cursor-pointer line-through">Website Bisnis Kustom</li>
+                    <li className="hover:text-Emerald-green cursor-pointer"><Link to={'WebCustom'}>Website Bisnis Kustom</Link></li>
                     <li className="hover:text-Emerald-green cursor-pointer line-through">Aplikasi Android & iOS</li>
                     <li className="hover:text-Emerald-green cursor-pointer line-through">Sistem Informasi</li>
                   </ul>

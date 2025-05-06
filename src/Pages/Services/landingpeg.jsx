@@ -1,16 +1,16 @@
-import landpage from "../../assets/Landingpej.png";
-import feature1 from "../../assets/DesignCreative.png";
-import feature2 from "../../assets/ContentWriting.png";
-import feature3 from "../../assets/digitalIntergration.png";
+import landpage from "../../assets/Landingpej.webp";
+import feature1 from "../../assets/DesignCreative.webp";
+import feature2 from "../../assets/ContentWriting.webp";
+import feature3 from "../../assets/digitalIntergration.webp";
 
-import logo7 from '../../assets/BrandSupport/fashThrift.png';
-import logo2 from '../../assets/BrandSupport/Joys.png';
-import logo3 from '../../assets/BrandSupport/PI.png';
-import logo4 from '../../assets/BrandSupport/Sinefolis.png';
-import logo5 from '../../assets/BrandSupport/UrusIUsaha.png';
-import logo6 from '../../assets/BrandSupport/VsTravel.png';
-import logo1 from '../../assets/BrandSupport/google.png';
-import logo8 from '../../assets/BrandSupport/ftbw.png';
+import logo7 from '../../assets/BrandSupport/fashThrift.webp';
+import logo2 from '../../assets/BrandSupport/Joys.webp';
+import logo3 from '../../assets/BrandSupport/PI.webp';
+import logo4 from '../../assets/BrandSupport/Sinefolis.webp';
+import logo5 from '../../assets/BrandSupport/UrusIUsaha.webp';
+import logo6 from '../../assets/BrandSupport/VsTravel.webp';
+import logo1 from '../../assets/BrandSupport/google.webp';
+import logo8 from '../../assets/BrandSupport/ftbw.webp';
 import { useEffect, useState } from "react";
 import { Link } from "react-router";
 

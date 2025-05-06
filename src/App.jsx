@@ -16,6 +16,7 @@ import Footer from './Component/Footer';
 import GoogleSEO from './Pages/Services/GoogleSeo';
 
 import WebCHAT from './Component/Webchat';
+import CustomWebsitePage from './Pages/Services/WebCustom';
 
 function App() {
 
@@ -27,6 +28,7 @@ function App() {
         <Route path="Solution" element={<Solution />} />
         <Route path="Portfolio" element={<Portfolio />} />
         <Route path="AboutUs" element={<AboutUs />} />
+        <Route path="WebCustom" element={<CustomWebsitePage />} />
         <Route path="Blog" element={<Blog />} />
         <Route path='Blog1' element={<Blog1 />} />
         <Route path='Blog2' element={<Blog2 />} />

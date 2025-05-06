@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
-import Sinefolis from '../assets/BrandSupport/5.png';
-import VsTravel from '../assets/BrandSupport/6.png';
-import FtbwCosmetic from '../assets/BrandSupport/7.png';
-import UID from '../assets/BrandSupport/8.png';
+import Sinefolis from '../assets/BrandSupport/5.webp';
+import VsTravel from '../assets/BrandSupport/6.webp';
+import FtbwCosmetic from '../assets/BrandSupport/7.webp';
+import UID from '../assets/BrandSupport/8.webp';
 import CardGrid from '../Component/cardgrid';
 
 const Portfolio = () => {
