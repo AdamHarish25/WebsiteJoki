@@ -143,7 +143,7 @@ const Home = () => {
                 },
                 {
                     text: "Kustom Website",
-                    link: ""
+                    link: "WebCustom"
                 },
             ],
         },

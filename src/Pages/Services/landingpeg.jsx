@@ -13,6 +13,7 @@ import logo1 from '../../assets/BrandSupport/google.webp';
 import logo8 from '../../assets/BrandSupport/ftbw.webp';
 import { useEffect, useState } from "react";
 import { Link } from "react-router";
+import FaqDropdown from "../../Component/faqCollapsible";
 
 const LandingPage = () => {
     const [isClicked, setIsClicked] = useState(false);
@@ -44,6 +45,49 @@ const LandingPage = () => {
             logo: logo7
         },
     ];
+
+    const faqs = [
+    {
+      question: 'Berapa lama proses pembuatan website di WebsiteJokiID?',
+      answer:
+        'Proses pembuatan website di WebsiteJokiID sekitar 14 hari, tergantung dari kebutuhan fitur dan revisi desain yang diperlukan.',
+    },
+    {
+      question: 'Domain apa saja yang bisa didapatkan?',
+      answer:
+        'WebsiteJokiID menyediakan domain .com, .id, .co.id, .my.id, dan domain lainnya sesuai permintaan.',
+    },
+    {
+      question: 'Apakah akan diberikan garansi?',
+      answer:
+        'Ya, kami memberikan garansi revisi dan dukungan teknis selama 1 bulan setelah website selesai.',
+    },
+    // {
+    //   question: 'Apa bisa mengelola websitenya sendiri?',
+    //   answer:
+    //     'Tentu! Website dilengkapi dengan dashboard admin yang memudahkan Anda mengelola konten secara mandiri.',
+    // },
+    {
+      question: 'Apakah mendapatkan akses Cpanel hosting?',
+      answer:
+        'Jika Anda menggunakan paket hosting dari kami, Anda akan mendapatkan akses penuh ke Cpanel.',
+    },
+    {
+      question: 'Data apa saja yang diperlukan untuk membuat website?',
+      answer:
+        'Kami membutuhkan informasi usaha, gambar produk/jasa, profil bisnis, dan preferensi desain Anda.',
+    },
+    {
+      question: 'Apakah perlu melakukan pertemuan untuk pembuatan website?',
+      answer:
+        'Semua proses dapat dilakukan secara online melalui WhatsApp atau email, tanpa perlu pertemuan langsung.',
+    },
+    {
+      question: 'Apakah harga sudah termasuk domain & hosting?',
+      answer:
+        'Ya, semua paket kami sudah termasuk domain dan hosting selama 1 tahun.',
+    },
+  ];
 
     useEffect(() => {
         document.title = "WebsiteJokiID | Kerjaan berat kita yang buat"
@@ -203,8 +247,23 @@ const LandingPage = () => {
                 </div>
             </section>
 
+
+              {/* CTA Section */}
+                        <div className="w-full grid place-items-center">
+                            <section className="bg-Emerald-green text-white py-16 px-6 md:px-7 text-center rounded-lg w-fit">
+                                <h2 className="text-3xl font-bold mb-4">Siap Memperluas Jangkauan Sayap Bisnismu?</h2>
+                                <p className="mb-6 text-lg">
+                                    Hubungi kami sekarang untuk mendapatkan layanan terbaik dari WebsiteJokiID
+                                    untuk meningkatkan penjualan yang lebih baik!
+                                </p>
+                                <Link to="https://wa.me/6285179808325" className="px-6 py-3 bg-white text-Emerald-green rounded hover:bg-Emerald-green hover:text-white transition">
+                                    Konsultasi Gratis
+                                </Link>
+                            </section>
+                        </div>
+
             {/* FAQ */}
-            <section className={className.section}>
+            {/* <section className={className.section}>
                 <h2 className={className.heading}>Pertanyaan <span className={className.highlight}>Umum</span></h2>
                 <div className="mt-8 space-y-6">
                     <details className={`px-4 py-2 rounded-lg hover:bg-white hover:border-Emerald-green border ${isClicked == true ? "bg-white border-Emerald-green" : "bg-gray-100 border-white"}`} onClick={() => {
@@ -221,9 +280,9 @@ const LandingPage = () => {
                         <p className="text-gray-500 mt-2 text-base">Tentu! Kami menyediakan layanan desain kustom sesuai kebutuhan bisnis Anda.</p>
                     </details>
                 </div>
-            </section>
+            </section> */}
 
-
+            <FaqDropdown faqs={faqs}/>
         </div>
     );
 };

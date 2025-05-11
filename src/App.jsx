@@ -17,12 +17,14 @@ import GoogleSEO from './Pages/Services/GoogleSeo';
 
 import WebCHAT from './Component/Webchat';
 import CustomWebsitePage from './Pages/Services/WebCustom';
+import ScrollToTop from './Component/scrolltoTop';
 
 function App() {
 
   return (
     <div className='relative'>
       <Navbar />
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="Solution" element={<Solution />} />

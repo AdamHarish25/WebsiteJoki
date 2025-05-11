@@ -77,7 +77,7 @@ const Footer = () => {
             <h1 className={className.boxTitle}>Untuk Bisnis</h1>
             <ul>
               <li>
-                <a className={className.listTitle} href="">Website Kustom untuk Bisnis</a>
+                <Link className={className.listTitle} to="WebCustom">Website Kustom untuk Bisnis</Link>
               </li>
               <li>
                 <a className={className.listTitle} href="">Sistem Informasi</a>

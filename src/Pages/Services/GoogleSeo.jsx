@@ -11,6 +11,7 @@ import logo8 from '../../assets/BrandSupport/ftbw.webp';
 
 import webAnalytics from '../../assets/WebMarketingIllustration.webp';
 import { Link } from "react-router";
+import FaqDropdown from "../../Component/faqCollapsible";
 
 export default function GoogleAdsPage() {
     const [isClicked, setIsClicked] = useState(false);
@@ -43,6 +44,21 @@ export default function GoogleAdsPage() {
             logo: logo7
         },
     ];
+
+    const faqs = [
+        {
+            question: 'Apa yang perlu dipersiapkan untuk beriklan di Google Ads?',
+            answer:
+                'Jika Anda memiliki akun bisnis, desain atau konten, maka Anda harus menyiapkan gambar promosi untuk memulai iklan.',
+        },
+        {
+            question: 'Kapan iklan akan terbit ke publik?',
+            answer:
+                'Segera setelah iklan disetujui oleh Google, iklan Anda akan tayang dengan cepat!',
+        },
+
+    ];
+
 
     useEffect(() => {
         document.title = "WebsiteJokiID | Pasarkan produk anda dengan orang yang professional"
@@ -238,7 +254,7 @@ export default function GoogleAdsPage() {
             </div>
 
             {/* FAQ Section */}
-            <section className="py-16 px-6 md:px-20">
+            {/* <section className="py-16 px-6 md:px-20">
                 <h2 className="text-3xl font-bold text-center mb-10">
                     Pertanyaan yang Sering <span className="text-Emerald-green">Ditanyakan</span>
                 </h2>
@@ -261,9 +277,9 @@ export default function GoogleAdsPage() {
                         <p className="mt-2 text-sm">Segera setelah iklan disetujui oleh Google, iklan Anda akan tayang!</p>
                     </details>
                 </div>
-            </section>
+            </section> */}
 
-
+            <FaqDropdown faqs={faqs}/>
         </div>
     );
 }
